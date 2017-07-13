@@ -2,7 +2,7 @@
 
 import webpack from 'webpack';
 
-export default const wpconfig = {
+const wpconfig = {
     entry: './browser/index.jsx',
     output: {
         path: __dirname,
@@ -26,3 +26,5 @@ export default const wpconfig = {
         ]
     }
 };
+
+export default wpconfig;

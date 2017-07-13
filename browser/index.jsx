@@ -5,7 +5,7 @@ import { Router, Route, IndexRedirect, IndexRoute, browserHistory } from 'react-
 import { render } from 'react-dom';
 import { Provider } from 'react-redux';
 import store from './store';
-import Example from './example/container';
+import Example from './example/component';
 
 render(
     <Provider store={ store }>

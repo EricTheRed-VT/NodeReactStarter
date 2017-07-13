@@ -2,17 +2,19 @@
 
 /* ------------------- INITIAL STATE ------------------- */
 
-const initialState = {};
+const initialState = {
+    data: null
+};
 
-/* ---------------------- ACTIONS ---------------------- */
+/* ------------------- ACTION  TYPES ------------------- */
 
-export const EXAMPLEACTION = 'EXAMPLEACTION';
+export const EXAMPLE_ACTION = 'EXAMPLE_ACTION';
 
 /* ------------------ ACTION CREATORS ------------------ */
 
 export const exampleActionCreator = data => {
     return {
-        type: EXAMPLEACTION,
+        type: EXAMPLE_ACTION,
         data
     };
 };
@@ -22,17 +24,19 @@ export const exampleActionCreator = data => {
 export const exampleThunk = () => {
     return dispatch => {
         //do stuff
-        //dispatch(something)
+        //dispatch(exampleActionCreator(something));
     };
 };
 
 /* ---------------------- REDUCER ---------------------- */
 
-export function exampleReducer(state = initialState, action) {
+export default const exampleReducer = (state = initialState, action) => {
     switch (action.type) {
 
-        case EXAMPLEACTION:
-            const newState = state; //change stuff
+        case EXAMPLE_ACTION:
+            const newState = Object.assign({}, state);
+            newState.data = action.data;
+            //change stuff
             return newState;
 
         default:

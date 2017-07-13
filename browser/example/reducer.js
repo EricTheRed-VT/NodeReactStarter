@@ -30,7 +30,7 @@ export const exampleThunk = () => {
 
 /* ---------------------- REDUCER ---------------------- */
 
-export default const exampleReducer = (state = initialState, action) => {
+const exampleReducer = (state = initialState, action) => {
     switch (action.type) {
 
         case EXAMPLE_ACTION:
@@ -42,4 +42,6 @@ export default const exampleReducer = (state = initialState, action) => {
         default:
             return state;
     }
-}
+};
+
+export default exampleReducer;

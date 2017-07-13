@@ -3,7 +3,7 @@
 import webpack from 'webpack';
 
 export default const wpconfig = {
-    entry: './browser/index.js',
+    entry: './browser/index.jsx',
     output: {
         path: __dirname,
         filename: './browser/public/bundle.js'

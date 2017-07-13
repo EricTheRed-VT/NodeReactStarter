@@ -3,7 +3,7 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import morgan from 'morgan';
-// import apiRouter from './api';
+import apiRouter from './api';
 
 const app = express()
     // Body parsing middleware
@@ -17,7 +17,7 @@ const app = express()
     .use(express.static(resolve(__dirname, '../browser/public')))
 
     // Serve our api
-    // .use('/api', apiRouter)
+    .use('/api', apiRouter)
 
     //serve github repository page
     .get('/github', (req, res, next) => res.redirect('https://github.com/EricTheRed-VT'))

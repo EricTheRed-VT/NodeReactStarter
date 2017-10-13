@@ -4,6 +4,7 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import morgan from 'morgan';
 import apiRouter from './api';
+import {resolve} from 'path';
 
 const app = express()
     // Body parsing middleware
